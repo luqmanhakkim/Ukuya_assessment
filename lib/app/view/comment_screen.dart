@@ -35,6 +35,19 @@ class _CommentScreenState extends State<CommentScreen> {
       appBar: AppBar(
         title: Text('Post'),
         centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.chevron_left,
+            color: Colors.white,
+          ),
+          iconSize: 40,
+          onPressed: () {
+            Navigator.of(context).pop();
+            context.read<BlogReaderBloc>().add(
+                  BlogReaderFetchAllPost(),
+                );
+          },
+        ),
       ),
       body: BlocBuilder<BlogReaderBloc, BlogReaderState>(
         builder: (context, state) {
@@ -179,5 +192,3 @@ class _CommentScreenState extends State<CommentScreen> {
     );
   }
 }
-
-

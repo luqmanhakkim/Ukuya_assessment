@@ -28,7 +28,7 @@ class PostScreenWidget extends StatelessWidget {
               ),
             ),
             subtitle: Text(
-             postItem.body,
+              postItem.body,
             ),
             trailing: Icon(Icons.chevron_right),
           ),

@@ -3,7 +3,6 @@ import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ukuya_assessment/repository/blog_reader_repository.dart';
 
-import '../models/comment_model.dart';
 import '../models/models.dart';
 
 part 'blog_reader_event.dart';

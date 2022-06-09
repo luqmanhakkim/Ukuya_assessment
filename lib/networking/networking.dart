@@ -27,7 +27,6 @@ class ApiUtil {
     Map<String, dynamic>? header,
     dynamic data,
     String? contentType,
-    // CancelToken? cancelToken,
   }) async {
     final _basedUrl = baseUrl ?? appUrl;
 

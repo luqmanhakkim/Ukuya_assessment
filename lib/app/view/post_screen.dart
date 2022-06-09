@@ -113,7 +113,17 @@ class _PostScreenState extends State<PostScreen> {
                     if (matchPost != null)
                       PostScreenWidget(
                         postItem: matchPost,
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CommentScreen(
+                                id: matchPost!.id,
+                                userId: matchPost.userId,
+                              ),
+                            ),
+                          );
+                        },
                       )
                     else
                       ListView.separated(
